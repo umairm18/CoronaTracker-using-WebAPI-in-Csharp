@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE515147-8F64-49DA-BACE-2D127178FFCE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VPProject</RootNamespace>
+    <AssemblyName>VPProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.2.0.0\lib\net35-Client\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.3.0.0\lib\net35-Client\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Country.cs" />
+    <Compile Include="Covid19Tracker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Covid19Tracker.Designer.cs">
+      <DependentUpon>Covid19Tracker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataHandling.cs" />
+    <Compile Include="ForContact.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ForContact.Designer.cs">
+      <DependentUpon>ForContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ForDashboard.Designer.cs">
+      <DependentUpon>ForDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForGraph.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ForGraph.Designer.cs">
+      <DependentUpon>ForGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ForSetting.Designer.cs">
+      <DependentUpon>ForSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebAPIData.cs" />
+    <EmbeddedResource Include="Covid19Tracker.en.resx">
+      <DependentUpon>Covid19Tracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Covid19Tracker.resx">
+      <DependentUpon>Covid19Tracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Covid19Tracker.tr-TR.resx">
+      <DependentUpon>Covid19Tracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Covid19Tracker.tr.resx">
+      <DependentUpon>Covid19Tracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Covid19Tracker.uk.resx">
+      <DependentUpon>Covid19Tracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Covid19Tracker.ur-PK.resx">
+      <DependentUpon>Covid19Tracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Covid19Tracker.ur.resx">
+      <DependentUpon>Covid19Tracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForContact.resx">
+      <DependentUpon>ForContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForContact.tr-TR.resx">
+      <DependentUpon>ForContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForContact.ur-PK.resx">
+      <DependentUpon>ForContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForDashboard.aa.resx">
+      <DependentUpon>ForDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForDashboard.en-US.resx">
+      <DependentUpon>ForDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForDashboard.en.resx">
+      <DependentUpon>ForDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForDashboard.eo-001.resx">
+      <DependentUpon>ForDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForDashboard.resx">
+      <DependentUpon>ForDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForDashboard.tr-TR.resx">
+      <DependentUpon>ForDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForDashboard.ur-PK.resx">
+      <DependentUpon>ForDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForDashboard.ur.resx">
+      <DependentUpon>ForDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForGraph.resx">
+      <DependentUpon>ForGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForSetting.resx">
+      <DependentUpon>ForSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForSetting.tr-TR.resx">
+      <DependentUpon>ForSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForSetting.ur-PK.resx">
+      <DependentUpon>ForSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.en.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.tk.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.tr-TR.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.uk.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.ur-PK.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
